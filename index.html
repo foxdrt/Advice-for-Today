@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+      .hidden {
+        display: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(171, 223, 206);
+        width: 41rem;
+        height: 26rem;
+        padding: 5px;
+      }
+      #Input {
+        position: relative;
+        top: 30%;
+        left: 30%;
+        width: 15rem;
+        height: 3rem;
+        border: none;
+        border-radius: 3px;
+        font-size: large;
+        text-align: center;
+      }
+      .H1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: rgb(255, 255, 255);
+      }
+      #closeBtn {
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 1%;
+        left: 95%;
+        border: none;
+        font-size: x-large;
+        cursor: pointer;
+      }
+      #saveBtn {
+        position: absolute;
+        top: 49%;
+        left: 68%;
+        width: 8.4rem;
+        height: 3rem;
+        font-size: large;
+        text-wrap: nowrap;
+        border: rgb(106, 215, 63) solid 2px;
+        border-radius: 3px;
+        transition: scale 0.3s ease-in-out, background-color 0.3s ease-out,
+          color 0.3s ease-in-out;
+        padding: 2px;
+        background-color: none;
+      }
+      #saveBtn:hover {
+        scale: 103%;
+        background-color: rgb(106, 215, 63);
+        color: white;
+      }
+      #saveBtn:active {
+        transform: translateY(4px);
+      }
+      .ovarflor {
+        background-color: rgba(0, 0, 0, 0.208);
+      }
+      .Main {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: sold 3px;
+        border-color: rgb(43, 141, 226);
+        border-style: dotted;
+        width: 30rem;
+        height: 18rem;
+        padding: 2rem;
+        border-radius: 3px;
+      }
+      #adviceBtn {
+        position: absolute;
+        top: 80%;
+
+        width: 8.4rem;
+        height: 3rem;
+        font-size: large;
+        text-wrap: nowrap;
+        border: blueviolet solid 2px;
+        border-radius: 3px;
+        transition: scale 0.3s ease-in-out, background-color 0.3s ease-out,
+          color 0.3s ease-in-out;
+        padding: 2px;
+      }
+      #adviceBtn:hover {
+        scale: 103%;
+        background-color: blueviolet;
+        color: white;
+      }
+      #adviceBtn:active {
+        transform: translateY(4px);
+      }
+
+      #Add_Advice {
+        position: absolute;
+        top: 80%;
+        left: 33%;
+        width: 8.4rem;
+        height: 3rem;
+        font-size: large;
+        text-wrap: nowrap;
+        border: rgb(106, 215, 63) solid 2px;
+        border-radius: 3px;
+        transition: scale 0.3s ease-in-out, background-color 0.3s ease-out,
+          color 0.3s ease-in-out;
+        padding: 2px;
+      }
+      #Add_Advice:hover {
+        scale: 103%;
+        background-color: rgb(106, 215, 63);
+        color: white;
+      }
+      #Add_Advice:active {
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Main">
+      <h1>Your Advice For Today Is</h1>
+      <h2 id="Advice"></h2>
+      <button id="adviceBtn">Click for advice</button>
+      <button id="Add_Advice">Add your advice</button>
+    </div>
+    <div class="window hidden">
+      <h1 class="H1">Add your advice</h1>
+      <input type="text" id="Input" placeholder="Add your advice here!" />
+      <button id="closeBtn">X</button>
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <script src="cow.js"></script>
+  </body>
+</html>
